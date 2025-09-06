@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECAF Consulting - Accueil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-slide {opacity: 0;transform: translateY(30px);transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
+    .fade-slide.visible {opacity: 1;transform: translateY(0);}
+    :root {
+      --primary: #0D2D5B;
+      --secondary: #1E4E8D;
+      --accent: #007bff;
+      --light-bg: #f8faff;
+      --text-color: #333;
+    }
+    body {
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body class="font-sans" style="background-color: var(--light-bg)">
+  <header class="shadow-md fade-slide" style="background-color: var(--primary); color:white;">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">ADECAF Consulting</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-[var(--accent)] transition">Accueil</a>
+        <a href="prestations.html" class="hover:text-[var(--accent)] transition">Nos prestations</a>
+        <a href="catalogue.html" class="hover:text-[var(--accent)] transition">Catalogue</a>
+        <a href="contact.html" class="hover:text-[var(--accent)] transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="py-12 text-center fade-slide">
+      <div class="container mx-auto">
+        <img src="IMAGE ACCUEIL 2.jpg" alt="Bannière de Bienvenue ADECAF Consulting" class="mx-auto w-full max-w-6xl rounded-lg shadow-xl mb-8">
+        
+        <div class="max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-md mb-8 fade-slide">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Chez ADECAF Consulting, nous sommes les architectes de votre succès. Nous vous invitons à découvrir un partenariat où l'excellence et l'innovation sont au cœur de chaque projet. Notre approche est fondée sur une compréhension profonde de vos défis, garantissant des solutions sur mesure qui transforment les compétences de vos équipes et renforcent les fondations de votre entreprise. Faites confiance à notre engagement pour vous guider vers l'excellence opérationnelle et une croissance durable.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto p-8 rounded-lg shadow-xl text-white fade-slide" style="background-color: var(--secondary);">
+          <div class="grid md:grid-cols-3 gap-8 items-center">
+            <div class="flex flex-col items-center">
+              <span class="text-5xl font-extrabold">+20</span>
+              <p class="text-xl font-medium mt-2">ans d'expertise</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-5xl font-extrabold">+900</span>
+              <p class="text-xl font-medium mt-2">personnes formées</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-5xl font-extrabold">100%</span>
+              <p class="text-xl font-medium mt-2">taux de satisfaction</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col md:flex-row items-center md:items-start gap-8 max-w-6xl mx-auto fade-slide">
+          <img src="IMAGE ACCUEIL 3.jpg" alt="Description de l'image pour ADECAF Consulting" class="w-full md:w-1/2 rounded-lg shadow-xl">
+          <div class="text-left md:w-1/2 p-4 bg-white rounded-lg shadow-md">
+            <div class="p-4 mb-4 border border-[var(--secondary)] rounded-lg shadow-sm">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                Le cabinet ADECAF Consulting se distingue par sa capacité à créer une balance parfaite entre théorie et pratique, vous offrant des solutions qui allient expertise reconnue et mise en application concrète. Nous croyons que le véritable succès réside dans l'équilibre entre la performance opérationnelle et la croissance durable. Notre mission est de vous accompagner pour que vos équipes et votre organisation trouvent cet équilibre, en transformant vos défis en opportunités.
+                </p>
+            </div>
+            <div class="p-4 mb-4 border border-[var(--secondary)] rounded-lg shadow-sm">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                Nous sommes engagés à fournir des conseils sur mesure qui s'adaptent à vos besoins spécifiques. Que ce soit pour une formation ciblée, un audit approfondi ou un accompagnement stratégique, notre équipe d'experts est à votre disposition pour garantir que chaque action mène à des résultats tangibles et mesurables. Votre réussite est notre plus grande satisfaction.
+                </p>
+            </div>
+            <div class="p-4 border border-[var(--secondary)] rounded-lg shadow-sm">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                Notre méthodologie éprouvée et notre approche orientée vers les résultats nous permettent de bâtir des partenariats à long terme basés sur la confiance et l'efficacité. Nous vous aidons à naviguer dans un environnement en constante évolution en vous fournissant les outils et les connaissances nécessaires pour prospérer.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white text-center p-4 mt-12 fade-slide" style="background-color: var(--primary);">
+    <p>&copy; 2025 ADECAF Consulting – Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-slide').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
