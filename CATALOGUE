@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECAF Consulting - Catalogue de Formations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-slide {opacity: 0;transform: translateY(30px);transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
+    .fade-slide.visible {opacity: 1;transform: translateY(0);}
+    :root {
+      --primary: #0D2D5B;
+      --secondary: #1E4E8D;
+      --accent: #007bff;
+      --light-bg: #f8faff;
+      --text-color: #333;
+    }
+    body {
+      color: var(--text-color);
+    }
+    details summary {cursor:pointer;padding:0.5rem;font-weight:600;color:var(--secondary);}
+    details[open] summary {color:var(--accent);}
+  </style>
+</head>
+<body class="font-sans" style="background-color: var(--light-bg)">
+  <header class="shadow-md fade-slide" style="background-color: var(--primary); color:white;">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">ADECAF Consulting</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-[var(--accent)] transition">Accueil</a>
+        <a href="prestations.html" class="hover:text-[var(--accent)] transition">Nos prestations</a>
+        <a href="catalogue.html" class="hover:text-[var(--accent)] transition">Catalogue</a>
+        <a href="contact.html" class="hover:text-[var(--accent)] transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="catalogue" class="py-12 fade-slide" style="background-color: var(--light-bg)">
+      <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-6 text-center text-[var(--primary)]">Catalogue de Formations 2024</h2>
+        <div class="max-w-3xl mx-auto space-y-4">
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Management Organisationnel</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>AMDEC</li><li>SMED</li><li>Six Sigma</li><li>Outils de résolution de problèmes</li><li>Gestion de la maintenance</li><li>GMAO</li><li>Gestion de la production</li><li>GPAO</li><li>Chronométrage et jugement d’allure</li><li>MSP</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Technique</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Analyse vibratoire</li><li>Maintenance des turbines à vapeur</li><li>Alignement des machines tournantes</li><li>Automates programmables</li><li>Maintenance Hydraulique et Pneumatique</li><li>Instrumentation industrielle</li><li>Habilitation électrique</li><li>Dessin industriel</li><li>Dessin assisté par ordinateur</li><li>Machines outils à CN</li><li>Soudage</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Qualité</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>ISO 9001 v2015</li><li>ISO 14001</li><li>IATF 16949</li><li>Cores Tools</li><li>Approche processus</li><li>Audit interne</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Hygiène et Sécurité</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Sécurité dans les chantiers et ateliers</li><li>Management de la sécurité</li><li>Sécurité incendie</li><li>Secourisme</li><li>Prévention des risques industriels</li><li>Travaux en hauteur</li><li>Caristes</li><li>Ponts roulants</li><li>Espaces confinés</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Communication</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Communication orale et écrite</li><li>Communication interpersonnelle</li><li>Animation et conduite de réunion</li><li>Dynamique de groupe</li><li>Prise de parole en public</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Commercial</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Négociation commerciale</li><li>Techniques de vente</li><li>Stratégies commerciales</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Administratif & Financier</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Comptabilité générale analytique et budgétaire</li><li>Analyse financière</li><li>Gestion budgétaire</li><li>Gestion de la trésorerie</li><li>Établissement des budgets</li><li>Contrôle de gestion</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Sécurité Routière</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Conduite économique</li><li>Nouveau code de la route</li><li>Sécurité routière</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Informatique</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>MS Project</li><li>SCRUM</li><li>SQL Server</li><li>ITIL Fondation</li><li>Bureautique</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Gestion logistique</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Enjeux logistiques</li><li>Gestion des stocks</li><li>Gestion des approvisionnements</li><li>Conduite d’engins de manutention</li>
+            </ul>
+          </details>
+          <details class="bg-white shadow rounded-xl p-2">
+            <summary>Ressources humaines</summary>
+            <ul class="list-disc ml-6 mt-2 text-[var(--text-color)]">
+              <li>Gestion des ressources humaines</li><li>Gestion du stress</li><li>Leadership / Motivation</li><li>Diriger, Motiver et Communiquer</li><li>Prise de décision</li><li>Gestion des carrières</li><li>Développement personnel</li>
+            </ul>
+          </details>
+        </div>
+        <div class="text-center mt-6">
+          <a href="CATALOGUE_DE_FORMATIONS_2024_M2S.pdf" class="px-6 py-2 rounded-xl text-white hover:opacity-90 transition" style="background-color: var(--secondary);">Télécharger le PDF complet</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white text-center p-4 mt-12 fade-slide" style="background-color: var(--primary);">
+    <p>&copy; 2025 ADECAF Consulting – Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-slide').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
