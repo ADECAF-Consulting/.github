@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECAF Consulting - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-slide {opacity: 0;transform: translateY(30px);transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
+    .fade-slide.visible {opacity: 1;transform: translateY(0);}
+    :root {
+      --primary: #0D2D5B;
+      --secondary: #1E4E8D;
+      --accent: #007bff;
+      --light-bg: #f8faff;
+      --text-color: #333;
+    }
+    body {
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body class="font-sans" style="background-color: var(--light-bg)">
+  <header class="shadow-md fade-slide" style="background-color: var(--primary); color:white;">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">ADECAF Consulting</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-[var(--accent)] transition">Accueil</a>
+        <a href="prestations.html" class="hover:text-[var(--accent)] transition">Nos prestations</a>
+        <a href="catalogue.html" class="hover:text-[var(--accent)] transition">Catalogue</a>
+        <a href="contact.html" class="hover:text-[var(--accent)] transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contacts" class="py-12 container mx-auto fade-slide">
+      <h2 class="text-2xl font-bold mb-4 text-center text-[var(--primary)]">Contactez-nous</h2>
+      <form action="mailto:contact@adecafconsulting.com" method="post" enctype="text/plain" class="max-w-lg mx-auto space-y-4">
+        <input type="text" name="nom" placeholder="Nom et Prénom" class="w-full p-3 border rounded-xl" required>
+        <input type="email" name="email" placeholder="Votre Email" class="w-full p-3 border rounded-xl" required>
+        <input type="text" name="societe" placeholder="Société" class="w-full p-3 border rounded-xl">
+        <textarea name="message" placeholder="Votre demande" class="w-full p-3 border rounded-xl" rows="4" required></textarea>
+        <button type="submit" class="px-6 py-2 rounded-xl text-white hover:opacity-90 transition" style="background-color: var(--accent);">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="text-white text-center p-4 mt-12 fade-slide" style="background-color: var(--primary);">
+    <p>&copy; 2025 ADECAF Consulting – Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-slide').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
