@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECAF Consulting - Nos Prestations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-slide {opacity: 0;transform: translateY(30px);transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
+    .fade-slide.visible {opacity: 1;transform: translateY(0);}
+    :root {
+      --primary: #0D2D5B;
+      --secondary: #1E4E8D;
+      --accent: #007bff;
+      --light-bg: #f8faff;
+      --text-color: #333;
+    }
+    body {
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body class="font-sans" style="background-color: var(--light-bg)">
+  <header class="shadow-md fade-slide" style="background-color: var(--primary); color:white;">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">ADECAF Consulting</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-[var(--accent)] transition">Accueil</a>
+        <a href="prestations.html" class="hover:text-[var(--accent)] transition">Nos prestations</a>
+        <a href="catalogue.html" class="hover:text-[var(--accent)] transition">Catalogue</a>
+        <a href="contact.html" class="hover:text-[var(--accent)] transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="prestations" class="py-12 container mx-auto fade-slide">
+      <h2 class="text-2xl font-bold mb-6 text-center text-[var(--primary)]">Nos Prestations</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl shadow hover:shadow-lg transition bg-white border-l-4" style="border-color: var(--accent);">
+          <h3 class="text-xl font-semibold mb-2 text-[var(--secondary)]">Formation</h3>
+          <p>Programmes de formation sur mesure, adaptés précisément à vos objectifs et besoins spécifiques.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow hover:shadow-lg transition bg-white border-l-4" style="border-color: var(--accent);">
+          <h3 class="text-xl font-semibold mb-2 text-[var(--secondary)]">Assistance & Conseil</h3>
+          <p>Accompagnement expert et personnalisé pour optimiser les performances de vos équipes et projets.</p>
+        </div>
+        <div class="p-6 rounded-2xl shadow hover:shadow-lg transition bg-white border-l-4" style="border-color: var(--accent);">
+          <h3 class="text-xl font-semibold mb-2 text-[var(--secondary)]">Audit & Diagnostic</h3>
+          <p>Évaluation approfondie et recommandations stratégiques pour identifier les axes d'amélioration.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white text-center p-4 mt-12 fade-slide" style="background-color: var(--primary);">
+    <p>&copy; 2025 ADECAF Consulting – Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-slide').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
